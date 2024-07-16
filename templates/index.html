@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <title>Dertha</title>
+</head>
+<body class="bg-cover bg-center h-screen bg-[url('../static/urban-transport-paper-style-arrangement.jpg')] flex items-center justify-center "></body>
+<div class="flex items-center justify-center space-x-52">
+    <div>
+        <h1 class="text-8xl font-bubblegum hover:text-green-700 inline">Derteha</h1>
+        <p class="font-bubblegum">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem br ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem <br>ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+    </div>
+
+    <div class="h-[500px] w-[500px] bg-[#FF8C34] rounded-[20px] border-[6px] border-black items-center flex justify-center flex-col">
+        <form action="/login" class="items-center flex justify-center flex-col w-[100%]" method="post" >
+            <input name="email" type="email" class="h-[80px] w-[80%] mb-5 rounded-[20px] text-2xl p-4 border-[4px] border-black" placeholder="Enter your e-mail" required>
+            <input name="password" class="h-[80px] w-[80%] mb-5 rounded-[20px] text-2xl p-4 border-[4px] border-black" placeholder="Enter your password" type="password" required>
+            <input class="h-[80px] w-[80%] bg-[#41e62c] mb-5 rounded-[20px] text-3xl font-bold text-white border-[4px] border-black hover:bg-green-600" type="submit" value="Login"> 
+        </form>
+        <p class="text-2xl font-bold">{{error}}</p>
+        <div class="h-[8px] w-[80%] bg-black mb-5 rounded-[20px]"></div>
+        <form action="/signup" class="items-center flex justify-center flex-col w-[100%]">
+            <input class="h-[80px] w-[80%] bg-[#18A0CB] rounded-[20px] text-3xl font-bold hover:bg-[#38be6e] text-white border-[4px] border-black" value="Signup" type="submit">
+        </form>    
+    </div>
+    
+</div>
+
+
+</body>
+</html>
