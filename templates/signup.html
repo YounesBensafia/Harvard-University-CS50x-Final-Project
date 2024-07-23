@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/output.css">
-    <title>Signup</title>
+    <title>DoIt!: signup</title>
 </head>
-<body class="bg-cover bg-center h-screen bg-[url('../static/kelli-tungay-2LJ4rqK2qfU-unsplash.jpg')] flex items-center justify-center ">
-    <div class="bg-[#F6E176] w-[30%] h-[65%] rounded-[20px] items-center flex justify-center border-[6px] border-black flex-col">
+<body class="bg-cover bg-center h-screen bg-[url('../static/thomas-bormans-pcpsVsyFp_s-unsplash.jpg')] flex items-center justify-center ">
+    <div class="bg-[#F6E176] w-[30%] h-[65%] rounded-[20px] items-center flex justify-center border-[6px] border-black flex-col hover:bg-[#d8c14c]">
         <form action="/signup" class="items-center flex justify-center flex-col w-[100%]" method="post">
             <input name="email" type="email" class="h-[80px] w-[80%] mb-5 rounded-[20px] text-2xl p-4 border-[4px] border-black" placeholder="Enter your e-mail" required>
             <input name="password" class="h-[80px] w-[80%] mb-5 rounded-[20px] text-2xl p-4 border-[4px] border-black" placeholder="Enter your password" type="password" required>
             <input name="confi_pass" class="h-[80px] w-[80%] mb-5 rounded-[20px] text-2xl p-4 border-[4px] border-black" placeholder="Again your password" type="password" required>
             <input class="h-[80px] w-[80%] bg-[#41e62c] mb-5 rounded-[20px] text-3xl font-bold text-white border-[4px] border-black hover:bg-green-600" type="submit" value="Sign up">
         </form>
-        <p class="text-2xl font-bold">{{error}}</p>
+        <p class="text-2xl font-bold text-red-600 rounded-[20px] p-2">{{error}}</p>
     </div>
 </body>
 

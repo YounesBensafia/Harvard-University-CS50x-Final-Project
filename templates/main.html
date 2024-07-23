@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* Optional: additional custom styles */
+        .scroll-container {
+            max-height: 200px; /* Set a max height for the scrollable area */
+        }
+    </style> 
+    <title>DoIt! : home</title>
+
+</head>
+<body class="bg-cover bg-center h-screen bg-[url('../static/archee-lal-tYJjWVUbxcs-unsplash.jpg')] flex flex-col items-center justify-center gap-6">
+    <form action="./logout" class="w-[7%] h-[7%] rounded-[30px] bg-red-600 flex flex-col items-center border-[6px] border-black ml-auto mr-8 -mt-8">
+        <button class="w-[100%] h-[100%] rounded-[30px]"><p class="text-xl font-bold text-white">Log out</p></button>
+    </form>
+    <div class="w-[40%] h-[80%] rounded-[30px] bg-[#aaaeb2]  flex flex-col items-center border-[6px] border-black">
+        <form action="/main" method="post" class="flex w-[100%] h-[10%] items-center m-4" >
+            <input name="task" class="flex-grow h-full rounded-[30px] m-3 border-[5px] border-black p-6 text-2xl font-bold" required>
+            <button class="w-[20%] h-full bg-green-600 rounded-[30px] m-3 border-[5px] border-black hover:bg-green-700">
+                <p class="text-white text-2xl font-bold">Do IT!</p>
+            </button>
+        </form>
+        <div class=" w-[600px] h-[100%] rounded-[30px] p-7 overflow-y-scroll space-y-4 mt-4 mb-2">
+            {% for data in tasks|reverse %}
+                {% if data[3] == -1 %}
+                    <form action="/do" class="w-[100%] h-[60px] bg-red-600 rounded-[30px] mx-auto flex justify-center items-center border-[5px] border-black " method="post">
+                {% else %}
+                    <form action="/do" class="w-[100%] h-[60px] bg-green-600 rounded-[30px] mx-auto flex justify-center items-center border-[5px] border-black" method="post">
+                {% endif %}
+                            
+                
+                        <input type="hidden" name="id_button" value="{{ data[0] }}">
+                        <button name="buttonDo" class="w-[90%] h-[100%] rounded-[25px] p-3 items-center justify-center flex" value="button1">
+                            <p class="text-black text-2xl font-bold">{{ data[2] }}</p>
+                        </button>
+                        <button name="buttonDo" class="w-[48px] h-[48px] bg-blue-900 rounded-[30px] mx-auto flex justify-center items-center border-[5px] border-black hover:bg-red-600 mr-3" value="button2"><img src="../static/pngtree-delete-button-3d-icon-png-image_6217492.png" class="rounded-[30px]"></button>
+                    </form>
+                    
+
+                    
+                
+            {%endfor%}
+        </div>
+        
+    </div>
+    <script>
+    </script>
+
+</body>
