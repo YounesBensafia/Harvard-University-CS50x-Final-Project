@@ -1,5 +1,4 @@
 # DoIt! : A todo list web application 
-#### Video Demo:  [\[https://youtu.be/AcRAyNv0YWg\]](https://youtu.be/AcRAyNv0YWg)
 #### Description:
 For my final project, I created a ToDo web application. In most applications, managing data—such as creating, deleting, and updating entries—is crucial. The purpose of this project is to learn how to manage data effectively, connect a database to the application, and bridge the front end with the back end and It allows users to manage their tasks.
 
